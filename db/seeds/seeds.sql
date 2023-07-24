@@ -1,10 +1,10 @@
 INSERT INTO users (email, password)
 VALUES 
-('michael.lawson@gmail.com', '$2a$10$mOg1K5.ejDuaRtpYPw6E5.n9HASqxtdcMr66W4CtVPnlePROw8yP.'),
-('lindsay.ferguson@gmail.com', '$2a$10$mOg1K5.ejDuaRtpYPw6E5.n9HASqxtdcMr66W4CtVPnlePROw8yP.'),
-('tobias.funke@gmail.com', '$2a$10$mOg1K5.ejDuaRtpYPw6E5.n9HASqxtdcMr66W4CtVPnlePROw8yP.'),
-('byron.fields@gmail.com', '$2a$10$mOg1K5.ejDuaRtpYPw6E5.n9HASqxtdcMr66W4CtVPnlePROw8yP.'),
-('rachel.howell@gmail.com', '$2a$10$mOg1K5.ejDuaRtpYPw6E5.n9HASqxtdcMr66W4CtVPnlePROw8yP.');
+('michael.lawson@gmail.com', '$2a$10$rPwYfuQiNtscy8HY1Hk0ye3f2NegTZAYaR7o5H1Jut9M9ItzQsqFK'),
+('lindsay.ferguson@gmail.com', '$2a$10$rPwYfuQiNtscy8HY1Hk0ye3f2NegTZAYaR7o5H1Jut9M9ItzQsqFK'),
+('tobias.funke@gmail.com', '$2a$10$rPwYfuQiNtscy8HY1Hk0ye3f2NegTZAYaR7o5H1Jut9M9ItzQsqFK'),
+('byron.fields@gmail.com', '$2a$10$rPwYfuQiNtscy8HY1Hk0ye3f2NegTZAYaR7o5H1Jut9M9ItzQsqFK'),
+('rachel.howell@gmail.com', '$2a$10$rPwYfuQiNtscy8HY1Hk0ye3f2NegTZAYaR7o5H1Jut9M9ItzQsqFK');
 
 INSERT INTO notes (user_id, text)
 VALUES 

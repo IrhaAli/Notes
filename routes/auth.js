@@ -53,11 +53,11 @@ module.exports = (cookieParams) => {
     }
 
     // If account does not exist vs. exists
-    getUserByEmail(db, email)
-      .then(() => addUser(db, userInfo))
+    getUserByEmail(email)
+      .then(() => addUser(userInfo))
       .then(({ rows: id }) => {
         userInfo.id = id[0].id;
-        res.cookie('name', `${userInfo.id}`, cookieParams);
+        res.cookie('name', userInfo.id, cookieParams);
         return res.status(200).send(userInfo);
       })
       .catch((err) => res.status(status).send(err.detail));
