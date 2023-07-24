@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-module.exports = db => {
+module.exports = () => {
   // POST /api/auth/signup: create a new user account.
 
 

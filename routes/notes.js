@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-module.exports = db => {
+module.exports = () => {
   // GET /api/notes: get a list of all notes for the authenticated user.
   
 
