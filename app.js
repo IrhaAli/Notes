@@ -21,8 +21,8 @@ const searchRouter = require('./routes/search');
 const authRouter = require('./routes/auth');
 
 // Mount all resource routes
-app.use('/api/notes', notesRouter);
-app.use('/api/search', searchRouter);
+app.use('/api/notes', notesRouter());
+app.use('/api/search', searchRouter());
 app.use('/api/auth', authRouter(cookieParams));
 
 app.listen(PORT, () => {
