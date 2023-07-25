@@ -23,7 +23,7 @@ module.exports = () => {
         }
         return getNoteById(noteId)
       })
-      .then(({rows: note}) => {
+      .then(({ rows: note }) => {
         res.send(note);
       })
   });
@@ -100,7 +100,18 @@ module.exports = () => {
     const userId = req.body.userId;
     const noteId = req.url.split("/")[1];
 
-    shareNote(userId, noteId)
+    const status = 400
+    if (!userId) {
+      return res.status(status).send("Who do you want to share the note with?")
+    }
+
+    rightNoteOwner(noteId, userId)
+      .then(({ rows: note }) => {
+        if (note.length === 0) {
+          res.status(status).send("Looks like you're trying to share someone else's note")
+        }
+        return shareNote(userId, noteId)
+      })
       .then(() => {
         res.status(200).send("Note shared successfully");
       })

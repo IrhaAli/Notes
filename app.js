@@ -16,14 +16,14 @@ const cookieParams = {
 };
 
 // Separated Routes for each Resource
+const authRouter = require('./routes/auth');
 const notesRouter = require('./routes/notes');
 const searchRouter = require('./routes/search');
-const authRouter = require('./routes/auth');
 
 // Mount all resource routes
-app.use('/api/notes', notesRouter());
-app.use('/api/search', searchRouter());
 app.use('/api/auth', authRouter(cookieParams));
+app.use('/api/notes', notesRouter());
+app.use('/api', searchRouter());
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

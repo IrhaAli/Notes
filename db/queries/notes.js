@@ -46,4 +46,11 @@ const shareNote = function(userId, noteId) {
   })
 };
 
-module.exports = { getNotes, getNoteById, updateNote, addNote, removeNote, rightNoteOwner, shareNote };
+const getNotesByQuery = function(query, userId) {
+  queryParams = [query, userId];
+  queryString = `SELECT * FROM notes WHERE text LIKE $1 AND user_id = $2`
+
+  return db.query(queryString, queryParams);
+}
+
+module.exports = { getNotes, getNoteById, updateNote, addNote, removeNote, rightNoteOwner, shareNote, getNotesByQuery };
