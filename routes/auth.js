@@ -10,10 +10,10 @@ module.exports = (cookieParams) => {
     const { email, password } = req.body;
     let status = 400;
     if (!(email && validator.isEmail(email))) {
-      return res.status(status).send({ message: "Please provide a valid email" })
+      return res.status(status).send("Please provide a valid email")
     }
     if (!password || password.length < 1) {
-      return res.status(status).send({ message: "Please provide a valid password that is greater then 7 characters" })
+      return res.status(status).send("Please provide a valid password that is greater then 7 characters")
     }
 
     // If valid, get user information and verify login details
